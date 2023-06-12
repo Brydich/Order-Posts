@@ -1,0 +1,111 @@
+.auth-form {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  min-width: 420px;
+  max-width: 500px;
+  transform: translate(-50%, -50%);
+  display: block;
+  background-color: #ffa171;
+  /* .auth-form__title */
+  &__title {
+    font-weight: 400;
+    font-size: 27px;
+    color: #fff;
+    background-color: #754636;
+    padding: 15px;
+    text-align: center;
+  }
+  /* .auth-form__list */
+  &__list {
+    padding: 15px;
+  }
+  /* .auth-form__item */
+  &__item {
+  }
+  /* .auth-form__item_title */
+  &__item_title {
+    font-weight: 400;
+    font-size: 24px;
+    color: #363636;
+    margin: 0 0 5px 0;
+  }
+  /* .auth-form__item_field */
+  &__item_field {
+    margin: 0 0 10px 0;
+  }
+  /* .auth-form__item_input */
+  &__item_input {
+    width: 100%;
+    border: 1px solid #fff;
+    padding: 20px 20px 20px 10px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    transition: all 0.3s;
+    &.ng-valid {
+      border-color: #00b6ff;
+    }
+    &.ng-invalid.ng-touched {
+      border-color: red;
+    }
+    &:focus {
+      border-color: #000 !important;
+    }
+  }
+  /* .auth-form__item_errors-list */
+  &__item_errors-list {
+
+  }
+  /* .auth-form__submit */
+  &__submit {
+  }
+  /* .auth-form__submit_btn */
+  &__submit_btn {
+    width: 100%;
+    padding: 15px 25px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #d5cf5d;
+    transition: all 0.3s ease;
+    &:disabled {
+      background-color: #865c40;
+    }
+  }
+  /* .auth-form__switch-auth */
+  &__switch-auth {
+  }
+}
+.errors-list {
+  margin: 5px 0 0 0;
+  //display: none;
+  /* .errors-list__item */
+  &__item {
+    font-size: 17px;
+    margin: 3px 0;
+    color: red;
+  }
+}
+.switch-auth {
+  text-align: center;
+  background-color: #6e5437;
+  padding: 15px 15px 15px 15px;
+}
+.switch-auth_text {
+  a {
+    color: #fff;
+    font-size: 17px;
+    span {
+      color: #00b6ff;
+      // color: #FF6E40;
+      // color: #E05263;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

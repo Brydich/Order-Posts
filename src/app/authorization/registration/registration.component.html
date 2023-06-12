@@ -1,0 +1,78 @@
+<form class="auth-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="auth-form__title">
+    <p>Регистрация</p>
+  </div>
+  <ul class="auth-form__list">
+    <li class="auth-form__item">
+      <div class="auth-form__item_title">
+        <p>Имя</p>
+      </div>
+      <div class="auth-form__item_field">
+        <input
+          class="auth-form__item_input"
+          type="text"
+          formControlName="name"
+          placeholder="Name">
+        <ul
+          class="auth-form__item_errors-list errors-list"
+          *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+          <li class="errors-list__item" *ngIf="form.get('name')?.errors?.['required']">
+            <span >The field must be filled in</span>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="auth-form__item">
+      <div class="auth-form__item_title">
+        <p>E-mail</p>
+      </div>
+      <div class="auth-form__item_field">
+        <input
+          class="auth-form__item_input"
+          type="text"
+          formControlName="email"
+          placeholder="E-mail">
+        <ul
+          class="auth-form__item_errors-list errors-list"
+          *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+          <li class="errors-list__item" *ngIf="form.get('email')?.errors?.['required']">
+            <span >The field must be filled in</span>
+          </li>
+          <li class="errors-list__item" *ngIf="form.get('email')?.errors?.['email']">
+            <span>The field must have "@"</span>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="auth-form__item">
+      <div class="auth-form__item_title">
+        <p>Пароль</p>
+      </div>
+      <div class="auth-form__item_field">
+        <input
+          class="auth-form__item_input"
+          type="password"
+          placeholder="Password"
+          formControlName="password">
+        <ul
+          class="auth-form__item_errors-list errors-list"
+          *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+          <li class="errors-list__item" *ngIf="form.get('password')?.errors?.['minlength']">
+            <span>The field must contain more symbols</span>
+          </li>
+          <li class="errors-list__item" *ngIf="form.get('password')?.errors?.['required']">
+            <span>The field must be filled in</span>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="auth-form__item auth-form__submit">
+      <button class="auth-form__submit_btn" [disabled]="form.invalid">Зарегистрироваться</button>
+    </li>
+  </ul>
+  <div class="auth-form__switch-auth switch-auth">
+    <div class="switch-auth_text">
+      <a href="" [routerLink]="'/login'">Уже есть аккаунт? <span>Войти!</span></a>
+    </div>
+  </div>
+</form>

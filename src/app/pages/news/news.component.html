@@ -1,0 +1,25 @@
+<ul class="post-list">
+  <li class="post-list__item" *ngFor="let item of arrayPosts">
+    <div class="post-list__head-line">
+      <div class="post-list__head-line_img">
+        <img src="../../../assets/img/person.png" alt="">
+      </div>
+      <div class="post-list__head-line_email">
+        <p>Email: {{item.email}}</p>
+      </div>
+    </div>
+    <ul class="post-list__public public-post" *ngFor="let post of item.publicPosts">
+      <li class="public-post__item">
+        <div class="post-list__title">
+          <p>{{post.title}}</p>
+        </div>
+        <div class="post-list__text">
+          <p>{{post.text}}</p>
+        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+<div class="post-add">
+  <button class="post-add_button" (click)="addPosts()">Загрузить еще</button>
+</div>

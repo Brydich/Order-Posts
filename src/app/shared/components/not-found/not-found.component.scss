@@ -1,0 +1,31 @@
+.not-found {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+.not-found_title {
+  font-size: 60px;
+  letter-spacing: 5px;
+  margin-bottom: 70px;
+}
+.not-found__list {
+  display: flex;
+  justify-content: space-around;
+}
+.not-found__item {
+  text-align: left;
+  &:not(:last-child) {
+    margin-right: 60px;
+  }
+}
+.not-found__link {
+  font-size: 30px;
+  color: #000;
+  transition: all 0.3s ease;
+  &:hover {
+    color: #4FE18A;
+  }
+}

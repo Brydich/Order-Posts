@@ -1,0 +1,23 @@
+<div class="header-padding"></div>
+<header class="header">
+  <div class="header__container">
+    <nav class="header__menu">
+      <div class="header__logo">
+        <img src="../../../../assets/img/logo.png" alt="" class="header__logo_img">
+        <p class="header__logo_p">NoteBOOK</p>
+      </div>
+      <ul class="header__menu_list menu-list">
+        <li class="menu-list__item"><a [routerLink]="'../pages/main'" href="" class="menu-list__link">Главная</a></li>
+        <li class="menu-list__item"><a [routerLink]="'../pages/news'" href="" class="menu-list__link">Лента новостей</a></li>
+      </ul>
+      <div class="menu-list__drop-list">
+        <p class="menu-list__drop-list_title" (click)="toggleIsMenuOpen()" [class._active]="isMenuOpen">Действия с аккаунтом <span></span></p>
+        <ul class="menu-list__account" [class._active]="isMenuOpen">
+          <li class="menu-list__account_item">
+            <a href="" class="menu-list__account_link" (click)="onLogout()">Выйти из аккаунта</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

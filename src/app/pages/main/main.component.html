@@ -1,0 +1,126 @@
+<form class="create-post" [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="isShowCreatePost">
+  <div class="create-post__head-line">
+    <div class="create-post__title">
+      <p>Придумайте заголовок:</p>
+      <input
+        type="text"
+        class="create-post__title_input"
+        formControlName="title"
+        placeholder="Title"
+      >
+    </div>
+    <div class="create-post__private">
+      <label for="create-post__private_input">Создать приватный пост</label>
+      <input
+        id="create-post__private_input"
+        type="checkbox"
+        class="create-post__private_input"
+        formControlName="isPrivate"
+      >
+    </div>
+  </div>
+  <div class="create-post__text">
+    <p>Придумайте текст для своего поста:</p>
+    <div class="create-post__text_cover">
+      <span></span>
+      <textarea
+        type="text"
+        class="create-post__text_textarea"
+        formControlName="text"
+        placeholder="Text"
+      ></textarea>
+      <span></span>
+    </div>
+  </div>
+  <div class="create-post__submit">
+    <button class="create-post__submit_button" [disabled]="form.invalid">Создать пост</button>
+  </div>
+</form>
+<div class="create-post_cover" (click)="isShowCreatePost = false" *ngIf="isShowCreatePost"></div>
+
+<div class="main">
+  <div class="main__container">
+    <div class="main__block window">
+      <!-- два блока с проверкой для будущей разработки верстки публичных и приватных постов (например, темный фон для приватных :) ) -->
+      <ul class="window__list" *ngIf="isShowPrivatePosts; else blockPublicPosts">
+        <div class="window__nothing" *ngIf="!isAnyPrivatePosts">
+          <div class="window__nothing_text">
+            <p>Создайте свой первый приватный пост</p>
+          </div>
+          <div class="window__nothing_img" (click)="isShowCreatePost = true">
+            <img src="../../../assets/img/private-icon.png" alt="">
+          </div>
+        </div>
+        <li class="window__item" *ngFor="let post of userInfo?.privatePosts">
+          <div class="window__head-line">
+            <div class="window__title">
+              <p>{{post.title}}</p>
+            </div>
+            <div class="window__icon">
+              <img class="window__icon_img" src="../../../assets/img/private-icon.png" alt="">
+            </div>
+          </div>
+          <div class="window__body">
+            <div class="window__text">
+              <p>{{post.text}}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ng-template class="window__list" #blockPublicPosts>
+        <div class="window__nothing" *ngIf="!isAnyPublicPosts">
+          <div class="window__nothing_text">
+            <p>Создайте свой первый публичный пост</p>
+          </div>
+          <div class="window__nothing_img" (click)="isShowCreatePost = true">
+            <img src="../../../assets/img/public-icon.png" alt="">
+          </div>
+        </div>
+        <li class="window__item" *ngFor="let post of userInfo?.publicPosts">
+          <div class="window__head-line">
+            <div class="window__title">
+              <p>{{post.title}}</p>
+            </div>
+            <div class="window__icon">
+              <img class="window__icon_img" src="../../../assets/img/public-icon.png" alt="">
+            </div>
+          </div>
+          <div class="window__body">
+            <div class="window__text">
+              <p>{{post.text}}</p>
+            </div>
+          </div>
+        </li>
+      </ng-template>
+    </div>
+    <div class="menu" [class._active]="isOpenMenu">
+      <div class="menu__container">
+        <ul class="menu__list">
+          <li class="menu__item" (click)="toggleShowMenu()">
+            <button class="menu__item_button">Закрыть</button>
+            <div class="menu__item_icon menu__item_img" [class._active]="isOpenMenu">
+              <span></span><span></span><span></span>
+            </div>
+          </li>
+          <li class="menu__item" (click)="isShowPrivatePosts = false" [class._active]="!isShowPrivatePosts">
+            <button class="menu__item_button">Показать публичные посты</button>
+            <img src="../../../assets/img/public-icon.png" alt="" class="menu__item_img">
+          </li>
+          <li class="menu__item" (click)="isShowCreatePost = true">
+            <button class="menu__item_button">Создать пост</button>
+            <img src="../../../assets/img/note.png" alt="" class="menu__item_img">
+          </li>
+          <li class="menu__item" (click)="isShowPrivatePosts = true" [class._active]="isShowPrivatePosts">
+            <button class="menu__item_button">Показать приватные посты</button>
+            <img src="../../../assets/img/private-icon.png" alt="" class="menu__item_img">
+          </li>
+        </ul>
+        <div class="menu__close">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

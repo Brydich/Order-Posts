@@ -1,0 +1,141 @@
+.header-padding {
+  margin: 145px;
+}
+.header {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  background-color: #fffac2;
+  padding: 40px 0;
+  /* .header__container */
+  &__container {
+    padding: 0 50px;
+  }
+  /* .header__menu */
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+  /* .header__logo */
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+  /* .header__logo_p */
+  &__logo_p {
+    font-size: 35px;
+    letter-spacing: 2px;
+  }
+  /* .header__logo_img */
+  &__logo_img {
+    max-width: 100%;
+    height: 65px;
+    margin: 0 15px 0 0;
+  }
+  /* .header__menu_list */
+  &__menu_list {
+  }
+}
+.menu-list {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  padding: 0 30px;
+  align-items: center;
+  /* .menu-list__item */
+  &__item {
+    padding: 5px 0;
+    &:not(:last-child) {
+      margin: 0 55px 0 0;
+    }
+  }
+  /* .menu-list__link */
+  &__link {
+    color: black;
+    font-size: 20px;
+    @media (hover: hover) {
+      transition: all 0.3s ease;
+      &:hover {
+        color: chocolate;
+      }
+    }
+  }
+  /* .menu-list__drop-list */
+  &__drop-list {
+    position: relative;
+  }
+  /* .menu-list__drop-list_title */
+  &__drop-list_title {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #000;
+    &>span {
+      display: inline-block;
+      height: 25px;
+      width: 25px;
+      margin: 0 0 0 30px;
+      background-image: url("../../../../assets/img/arrow-drop-list.png");
+      background-position: right, center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &._active {
+      text-shadow: 2px 2px 8px #000;
+      &>span {
+        transform: rotate(180deg);
+      }
+    }
+    @media (hover: hover) {
+      transition: all 0.3s ease;
+      &>span {
+        transition: all 0.3s ease;
+        transform: rotate(0deg);
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  /* .menu-list__account */
+  &__account {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 20px;
+    display: block;
+    padding: 15px;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background-color: coral;
+    transition: all 0.3s ease;
+    &._active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+      top: 30px;
+    }
+  }
+  /* .menu-list__account_item */
+  &__account_item {
+    &:not(:last-child) {
+      margin: 0 0 15px 0;
+    }
+  }
+  /* .menu-list__account_link */
+  &__account_link {
+    font-size: 25px;
+    color: #000;
+    @media (hover: hover) {
+      transition: all 0.3s ease;
+      &:hover {
+        color: #545454;
+      }
+    }
+  }
+}

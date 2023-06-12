@@ -1,0 +1,68 @@
+{
+  "posts": [
+    {
+      "email": "me@mail.ru",
+      "publicPosts": [
+        {
+          "title": "public title 1",
+          "text": "public text 1"
+        },
+        {
+          "title": "public title 2",
+          "text": "public text 2"
+        },
+        {
+          "title": "public title 3",
+          "text": "public text 3"
+        },
+        {
+          "title": "public title 4",
+          "text": "public text 4"
+        },
+        {
+          "title": "public title 5",
+          "text": "public text 5"
+        },
+        {
+          "title": "public title 6",
+          "text": "public text 6"
+        },
+        {
+          "title": "Lorem 50",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias consequatur doloribus eos error incidunt maiores nesciunt officiis perferendis quod, ratione sint tenetur ullam vel, voluptatibus. Ab aut doloremque ea facilis illum iste maiores modi mollitia necessitatibus placeat quia quos, rem repellendus tempora ullam vel veritatis! Aliquam iure non odio."
+        }
+      ],
+      "privatePosts": [
+        {
+          "title": "private title 1",
+          "text": "private text 1"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "email": "test@mail.ru",
+      "publicPosts": [
+        {
+          "title": "Title private 1",
+          "text": "Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    "
+        },
+        {
+          "title": "Title public 2",
+          "text": "Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    "
+        },
+        {
+          "title": "Title public 3",
+          "text": "Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    "
+        }
+      ],
+      "privatePosts": [
+        {
+          "title": "Title private 1",
+          "text": "Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    Text private 1 isjafdjnfasjfd    "
+        }
+      ],
+      "id": 2
+    }
+  ]
+}
